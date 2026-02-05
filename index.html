@@ -1,39 +1,251 @@
-<h1>PlayFreeverse Studio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PlayFreeverse – Games & Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p>
-PlayFreeverse is an independent Unity development studio focused on building
-editor tools and interactive systems that improve developer productivity.
-</p>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0f1220;
+      color: #eaeaf0;
+      line-height: 1.7;
+    }
 
-<h2>What We Do</h2>
-<p>
-We design and develop Unity Editor extensions, scene analysis tools, and
-experimental AI-assisted workflows for game developers.
-</p>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
 
-<h2>Featured Tool</h2>
-<h3>BOSA – Scene Assistant</h3>
-<p>
-BOSA is a Unity Editor tool that helps developers analyze scenes, inspect
-hierarchies, export structured data, and apply changes through guided tools.
-</p>
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #ffffff;
+    }
 
-<ul>
-  <li>Scene and hierarchy analysis</li>
-  <li>Inspector and console inspection</li>
-  <li>JSON-based workflows</li>
-  <li>Productivity-focused editor utilities</li>
-</ul>
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-<h2>Contact</h2>
-<p>
-Email:
-<a href="mailto:mh.khalili67@gmail.com">mh.khalili67@gmail.com</a>
-</p>
+    h2 {
+      font-size: 32px;
+      margin-top: 80px;
+      margin-bottom: 16px;
+    }
 
-<div class="note">
-<p>
-This website represents PlayFreeverse Studio for Unity Asset Store publishing
-and support purposes.
-</p>
-</div>
+    h3 {
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #cfd3ff;
+      max-width: 900px;
+    }
+
+    .hero {
+      padding-top: 40px;
+    }
+
+    .tagline {
+      font-size: 20px;
+      color: #9fa8ff;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .card {
+      background: #171a2f;
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .screenshots img {
+      width: 100%;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    .contact {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid #2a2f55;
+    }
+
+    a {
+      color: #8fa3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #9aa0c7;
+      border-top: 1px solid #2a2f55;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>PlayFreeverse</h1>
+      <div class="tagline">
+        Independent Game Development & Editor Tools
+      </div>
+
+      <p>
+        PlayFreeverse is an independent development project focused on building
+        original games and practical editor tools through hands-on production experience.
+      </p>
+    </section>
+
+    <!-- STORY -->
+    <section class="section">
+      <h2>Our Story</h2>
+
+      <p>
+        PlayFreeverse started as a game development initiative.
+        While working on an open-world game prototype, we encountered repeated
+        limitations in scene inspection, debugging, and iteration workflows.
+      </p>
+
+      <p>
+        Instead of relying solely on existing tools, we began creating internal
+        editor extensions to better understand, analyze, and safely modify complex scenes.
+        Over time, these internal tools became stable, reusable, and valuable beyond
+        a single project.
+      </p>
+
+      <p>
+        This process led to the creation of <strong>BOSA</strong> —
+        a growing set of editor tools designed from real production needs.
+      </p>
+    </section>
+
+    <!-- CURRENT TOOL -->
+    <section class="section">
+      <h2>Current Focus: BOSA – Base</h2>
+
+      <div class="card">
+        <p>
+          <strong>BOSA – Base</strong> is the first public release of our internal tooling.
+          It provides essential editor-side utilities for scene analysis,
+          structured JSON inspection, object placement, and safe scene backups.
+        </p>
+
+        <p>
+          This version is intentionally lightweight and focused.
+          It is designed for developers who want visibility and control
+          without introducing risk to their projects.
+        </p>
+
+        <p>
+          BOSA – Base is an editor-only toolset and does not include runtime components.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Game Projects</h2>
+
+      <div class="card">
+        <h3>Freeverse (In Development)</h3>
+        <p>
+          Freeverse is an open-world game concept focused on exploration,
+          systemic gameplay, and large-scale scene composition.
+          The complexity of this project directly influenced the design
+          of our internal editor tools.
+        </p>
+
+        <h3>Experimental Concepts</h3>
+        <p>
+          Alongside Freeverse, we experiment with smaller gameplay ideas and prototypes,
+          such as fast-paced sports mechanics and stylized strategy concepts.
+          These experiments help validate tools across different genres and scales.
+        </p>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="section">
+      <h2>Tooling Philosophy</h2>
+
+      <p>
+        Our tools are built with the same mindset as our games:
+        clarity over complexity, safety over shortcuts, and extensibility over rigid design.
+      </p>
+
+      <p>
+        Every public tool we release originates from real usage inside a working project.
+        We avoid speculative features and focus on workflows that have already proven useful.
+      </p>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="section">
+      <h2>Tool Screenshots</h2>
+
+      <p>
+        Below are examples from the BOSA – Base editor interface.
+      </p>
+
+      <div class="screenshots">
+        <!-- Replace with your actual images -->
+        <img src="assets/bosa_base_01.png" alt="BOSA Base Editor - Analyze Tab">
+        <img src="assets/bosa_base_02.png" alt="BOSA Base Editor - Deep Analyze">
+        <img src="assets/bosa_base_03.png" alt="BOSA Base Editor - JSON Apply">
+        <img src="assets/bosa_base_04.png" alt="BOSA Base Editor - Tools">
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+
+      <p>
+        For support, questions, or professional inquiries:
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:mh.khalili67@gmail.com">mh.khalili67@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- NOTE -->
+    <div class="note">
+      <p>
+        This website represents an independent development project and its publicly released tools.
+        All products are created and maintained by PlayFreeverse.
+        No affiliation with platform holders is implied.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
