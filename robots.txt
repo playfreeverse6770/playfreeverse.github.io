@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playfreeverse6770.github.io/playfreeverse.github.io/sitemap.xml
