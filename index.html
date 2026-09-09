@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.jpg">
-  <link rel="stylesheet" href="styles.css?v=7"><link rel="stylesheet" href="homepage.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=7"><link rel="stylesheet" href="homepage.css?v=1"><link rel="stylesheet" href="homepage-fixes.css?v=1">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://playfreeverse6770.github.io/playfreeverse.github.io/#org","name":"PlayFreeverse","url":"https://playfreeverse6770.github.io/playfreeverse.github.io/","logo":"https://playfreeverse6770.github.io/playfreeverse.github.io/playfreeverse_logo.jpg","sameAs":["https://www.youtube.com/@freeverseGame","https://www.instagram.com/playfreeverse/","https://github.com/playfreeverse6770"]},{"@type":"ItemList","name":"PlayFreeverse Games","itemListElement":[{"@type":"ListItem","position":1,"url":"https://playfreeverse6770.github.io/playfreeverse.github.io/games/freeverse.html","name":"Freeverse"},{"@type":"ListItem","position":2,"url":"https://playfreeverse6770.github.io/playfreeverse.github.io/games/flyfootball.html","name":"FlyFootball"},{"@type":"ListItem","position":3,"url":"https://playfreeverse6770.github.io/playfreeverse.github.io/games/geometric-strategy.html","name":"GeometricStrategy"}]}]}</script>
 </head>
 <body class="home-light">
@@ -38,156 +38,15 @@
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.9 8 7 10 4.1-2 7-5.4 7-10V6l-7-3Z"/></symbol>
     <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
   </svg>
-
   <a class="skip icon-link" href="#main"><svg class="icon"><use href="#i-arrow"/></svg><span>رفتن به محتوای اصلی</span></a>
-
-  <header class="site-header studio-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="./" aria-label="خانه PlayFreeverse"><img src="playfreeverse_logo.jpg" width="42" height="42" alt="لوگوی PlayFreeverse"><span>PlayFreeverse</span></a>
-      <nav class="site-nav studio-nav" aria-label="ناوبری اصلی">
-        <a class="icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>بازی‌ها</span></a>
-        <a class="icon-link" href="#studio"><svg class="icon"><use href="#i-info"/></svg><span>استودیو</span></a>
-        <a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a>
-        <a class="lang icon-link" href="en/" lang="en" dir="ltr"><svg class="icon"><use href="#i-language"/></svg><span>English</span></a>
-      </nav>
-      <details class="menu studio-menu"><summary aria-label="باز کردن منو">☰</summary><nav>
-        <a class="icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>بازی‌ها</span></a>
-        <a class="icon-link" href="#studio"><svg class="icon"><use href="#i-info"/></svg><span>استودیو</span></a>
-        <a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a>
-        <a class="icon-link" href="en/" lang="en" dir="ltr"><svg class="icon"><use href="#i-language"/></svg><span>English</span></a>
-      </nav></details>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="studio-hero">
-      <div class="container studio-hero-grid">
-        <div class="hero-message">
-          <span class="studio-kicker">PLAYFREEVERSE · INDEPENDENT GAME STUDIO</span>
-          <h1>سه بازی؛<br><em>سه جهان واقعی.</em></h1>
-          <p>ما یک قالب را سه بار تکرار نمی‌کنیم. Freeverse، FlyFootball و GeometricStrategy هرکدام زبان بصری، ریتم و مکانیک خودشان را دارند.</p>
-          <div class="hero-actions">
-            <a class="studio-button solid icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>ورود به دنیاها</span></a>
-            <a class="studio-button text icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>ارتباط با PlayFreeverse</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div class="world-index" aria-label="فهرست بازی‌ها">
-            <a class="icon-link" href="#freeverse"><span class="world-no">01</span><span>Freeverse</span><svg class="icon"><use href="#i-arrow"/></svg></a>
-            <a class="icon-link" href="#flyfootball"><span class="world-no">02</span><span>FlyFootball</span><svg class="icon"><use href="#i-arrow"/></svg></a>
-            <a class="icon-link" href="#geometric"><span class="world-no">03</span><span>GeometricStrategy</span><svg class="icon"><use href="#i-arrow"/></svg></a>
-          </div>
-        </div>
-        <div class="hero-collage" aria-label="تصاویر پروژه‌های PlayFreeverse">
-          <figure class="collage-main"><img src="freeverse_bg.jpg" width="900" height="600" fetchpriority="high" alt="تصویر پروژه Freeverse"></figure>
-          <figure class="collage-fly"><img src="assets/games/flyfootball-home.webp" width="420" height="242" alt="تصویر واقعی منوی FlyFootball"></figure>
-          <figure class="collage-geo"><img src="assets/games/geometric-strategy-home.webp" width="420" height="253" alt="تصویر واقعی گیم‌پلی GeometricStrategy"></figure>
-          <span class="collage-label">BUILD / TEST / PLAY</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="games" class="games-intro">
-      <div class="container editorial-heading">
-        <span class="eyeline">OUR GAMES</span>
-        <h2>به‌جای کارت‌های تکراری،<br>هر بازی یک فصل مستقل است.</h2>
-      </div>
-    </section>
-
-    <section id="freeverse" class="game-story story-freeverse">
-      <div class="container story-grid">
-        <div class="story-media">
-          <a class="image-link" href="games/freeverse.html" aria-label="باز کردن صفحه Freeverse"><img src="freeverse_bg.jpg" width="900" height="600" loading="lazy" alt="نمایی از پروژه Freeverse"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
-          <span class="giant-number">01</span>
-        </div>
-        <div class="story-copy">
-          <span class="story-type">OPEN WORLD · LIFE & ECONOMY</span>
-          <h3>Freeverse</h3>
-          <p>شهر، شغل، اقتصاد، کسب‌وکار و انتخاب‌هایی که باید در یک جهان متصل به هم معنا داشته باشند. Freeverse بزرگ‌ترین دنیای سیستم‌محور PlayFreeverse است.</p>
-          <div class="story-links">
-            <a class="story-primary icon-link" href="games/freeverse.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div class="release-rail" aria-label="مسیرهای انتشار Freeverse">
-            <span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="flyfootball" class="game-story story-fly">
-      <div class="container story-grid reverse">
-        <div class="story-media">
-          <a class="image-link" href="games/flyfootball.html" aria-label="باز کردن صفحه FlyFootball"><img src="assets/games/flyfootball-home.webp" width="420" height="242" loading="lazy" alt="منوی واقعی FlyFootball با دو قورباغه و مگس‌ها"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
-          <span class="giant-number">02</span>
-        </div>
-        <div class="story-copy">
-          <span class="story-type">ARCADE · FROGS · FAST REACTION</span>
-          <h3>FlyFootball</h3>
-          <p>یک مسابقه سریع و رنگی که زبان قورباغه، مگس‌کش، مگس‌ها و پرتابه‌ها میدان را به یک فوتبال عجیب و واکنشی تبدیل می‌کنند.</p>
-          <div class="story-links">
-            <a class="story-primary icon-link" href="games/flyfootball.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div class="release-rail" aria-label="مسیرهای انتشار FlyFootball">
-            <span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="geometric" class="game-story story-geo">
-      <div class="container story-grid">
-        <div class="story-media">
-          <a class="image-link" href="games/geometric-strategy.html" aria-label="باز کردن صفحه GeometricStrategy"><img src="assets/games/geometric-strategy-home.webp" width="420" height="253" loading="lazy" alt="گیم‌پلی واقعی GeometricStrategy با نقشه، منابع و نیروها"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
-          <span class="giant-number">03</span>
-        </div>
-        <div class="story-copy">
-          <span class="story-type">TACTICAL STRATEGY · PROGRESSION</span>
-          <h3>GeometricStrategy</h3>
-          <p>ارتش هندسی، منابع، قلمرو، ارتقا و استحکامات. تصمیم تاکتیکی باید روی نقشه دیده شود و progression به‌جای یک عدد، بخشی از بازی باشد.</p>
-          <div class="story-links">
-            <a class="story-primary icon-link" href="games/geometric-strategy.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div class="release-rail" aria-label="مسیرهای انتشار GeometricStrategy">
-            <span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span>
-            <span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="studio" class="studio-manifesto">
-      <div class="container manifesto-grid">
-        <div><span class="eyeline">PLAYFREEVERSE</span><h2>سبک یعنی سریع؛<br>ساده یعنی دقیق، نه ابتدایی.</h2></div>
-        <div><p>این سایت بدون فریم‌ورک، فونت خارجی یا کتابخانه آیکون ساخته شده است. تصویرها WebP سبک‌اند و آیکون‌ها SVG داخلی‌اند؛ یعنی ظاهر گیمی بدون هزینه سنگین برای لود صفحه.</p><a class="manifesto-link icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی و تماس</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div>
-      </div>
-    </section>
-
-    <section class="social-stage" aria-label="شبکه‌های رسمی PlayFreeverse">
-      <div class="container social-stage-grid">
-        <div><span class="eyeline">FOLLOW THE BUILD</span><h2>پشت صحنه ساخت بازی‌ها را دنبال کن.</h2></div>
-        <nav class="big-socials" aria-label="شبکه‌های اجتماعی">
-          <a class="icon-link" href="https://www.youtube.com/@freeverseGame" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-youtube"/></svg><span>YouTube</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          <a class="icon-link" href="https://www.instagram.com/playfreeverse/" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-instagram"/></svg><span>Instagram</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-          <a class="icon-link" href="https://github.com/playfreeverse6770" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-code"/></svg><span>GitHub</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
-        </nav>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer studio-footer">
-    <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="./"><img src="playfreeverse_logo.jpg" width="42" height="42" alt="لوگوی PlayFreeverse"><span>PlayFreeverse</span></a><p>Independent games. Distinct worlds.</p></div>
-      <div class="footer-links">
-        <a class="icon-link" href="privacy.html"><svg class="icon"><use href="#i-shield"/></svg><span>حریم خصوصی</span></a>
-        <a class="icon-link" href="terms.html"><svg class="icon"><use href="#i-doc"/></svg><span>شرایط استفاده</span></a>
-        <a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a>
-        <a class="icon-link" href="mailto:playfreeverse@gmail.com"><svg class="icon"><use href="#i-mail"/></svg><span>playfreeverse@gmail.com</span></a>
-      </div>
-    </div>
-    <div class="container copyright">© 2026 PlayFreeverse. همه حقوق محفوظ است.</div>
-  </footer>
-</body>
-</html>
+  <header class="site-header studio-header"><div class="container nav-wrap"><a class="brand" href="./" aria-label="خانه PlayFreeverse"><img src="playfreeverse_logo.jpg" width="42" height="42" alt="لوگوی PlayFreeverse"><span>PlayFreeverse</span></a><nav class="site-nav studio-nav" aria-label="ناوبری اصلی"><a class="icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>بازی‌ها</span></a><a class="icon-link" href="#studio"><svg class="icon"><use href="#i-info"/></svg><span>استودیو</span></a><a class="icon-link" href="tools/bosa-base.html"><svg class="icon"><use href="#i-code"/></svg><span>پلاگین Unity</span></a><a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a><a class="lang icon-link" href="en/" lang="en" dir="ltr"><svg class="icon"><use href="#i-language"/></svg><span>English</span></a></nav><details class="menu studio-menu"><summary aria-label="باز کردن منو">☰</summary><nav><a class="icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>بازی‌ها</span></a><a class="icon-link" href="#studio"><svg class="icon"><use href="#i-info"/></svg><span>استودیو</span></a><a class="icon-link" href="tools/bosa-base.html"><svg class="icon"><use href="#i-code"/></svg><span>پلاگین Unity</span></a><a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a><a class="icon-link" href="en/" lang="en" dir="ltr"><svg class="icon"><use href="#i-language"/></svg><span>English</span></a></nav></details></div></header>
+  <main id="main"><section class="studio-hero"><div class="container studio-hero-grid"><div class="hero-message"><span class="studio-kicker">PLAYFREEVERSE · INDEPENDENT GAME STUDIO</span><h1>سه بازی؛<br><em>سه جهان واقعی.</em></h1><p>ما یک قالب را سه بار تکرار نمی‌کنیم. Freeverse، FlyFootball و GeometricStrategy هرکدام زبان بصری، ریتم و مکانیک خودشان را دارند.</p><div class="hero-actions"><a class="studio-button solid icon-link" href="#games"><svg class="icon"><use href="#i-games"/></svg><span>ورود به دنیاها</span></a><a class="studio-button text icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>ارتباط با PlayFreeverse</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div><div class="world-index" aria-label="فهرست بازی‌ها"><a class="icon-link" href="#freeverse"><span class="world-no">01</span><span>Freeverse</span><svg class="icon"><use href="#i-arrow"/></svg></a><a class="icon-link" href="#flyfootball"><span class="world-no">02</span><span>FlyFootball</span><svg class="icon"><use href="#i-arrow"/></svg></a><a class="icon-link" href="#geometric"><span class="world-no">03</span><span>GeometricStrategy</span><svg class="icon"><use href="#i-arrow"/></svg></a></div></div><div class="hero-collage" aria-label="تصاویر پروژه‌های PlayFreeverse"><figure class="collage-main"><img src="freeverse_bg.jpg" width="900" height="600" fetchpriority="high" alt="تصویر پروژه Freeverse"></figure><figure class="collage-fly"><img src="assets/games/flyfootball-home.webp" width="420" height="242" alt="تصویر واقعی منوی FlyFootball"></figure><figure class="collage-geo"><img src="assets/games/geometric-strategy-home.webp" width="420" height="253" alt="تصویر واقعی گیم‌پلی GeometricStrategy"></figure><span class="collage-label">BUILD / TEST / PLAY</span></div></div></section>
+    <section id="games" class="games-intro"><div class="container editorial-heading"><span class="eyeline">OUR GAMES</span><h2>به‌جای کارت‌های تکراری،<br>هر بازی یک فصل مستقل است.</h2></div></section>
+    <section id="freeverse" class="game-story story-freeverse"><div class="container story-grid"><div class="story-media"><a class="image-link" href="games/freeverse.html" aria-label="باز کردن صفحه Freeverse"><img src="freeverse_bg.jpg" width="900" height="600" loading="lazy" alt="نمایی از پروژه Freeverse"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a><span class="giant-number">01</span></div><div class="story-copy"><span class="story-type">OPEN WORLD · LIFE & ECONOMY</span><h3>Freeverse</h3><p>شهر، شغل، اقتصاد، کسب‌وکار و انتخاب‌هایی که باید در یک جهان متصل به هم معنا داشته باشند. Freeverse بزرگ‌ترین دنیای سیستم‌محور PlayFreeverse است.</p><div class="story-links"><a class="story-primary icon-link" href="games/freeverse.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div><div class="release-rail" aria-label="مسیرهای انتشار Freeverse"><span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span></div></div></div></section>
+    <section id="flyfootball" class="game-story story-fly"><div class="container story-grid reverse"><div class="story-media"><a class="image-link" href="games/flyfootball.html" aria-label="باز کردن صفحه FlyFootball"><img src="assets/games/flyfootball-home.webp" width="420" height="242" loading="lazy" alt="منوی واقعی FlyFootball با دو قورباغه و مگس‌ها"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a><span class="giant-number">02</span></div><div class="story-copy"><span class="story-type">ARCADE · FROGS · FAST REACTION</span><h3>FlyFootball</h3><p>یک مسابقه سریع و رنگی که زبان قورباغه، مگس‌کش، مگس‌ها و پرتابه‌ها میدان را به یک فوتبال عجیب و واکنشی تبدیل می‌کنند.</p><div class="story-links"><a class="story-primary icon-link" href="games/flyfootball.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div><div class="release-rail" aria-label="مسیرهای انتشار FlyFootball"><span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span></div></div></div></section>
+    <section id="geometric" class="game-story story-geo"><div class="container story-grid"><div class="story-media"><a class="image-link" href="games/geometric-strategy.html" aria-label="باز کردن صفحه GeometricStrategy"><img src="assets/games/geometric-strategy-home.webp" width="420" height="253" loading="lazy" alt="گیم‌پلی واقعی GeometricStrategy با نقشه، منابع و نیروها"><span class="image-link-mark"><svg class="icon"><use href="#i-arrow"/></svg></span></a><span class="giant-number">03</span></div><div class="story-copy"><span class="story-type">TACTICAL STRATEGY · PROGRESSION</span><h3>GeometricStrategy</h3><p>ارتش هندسی، منابع، قلمرو، ارتقا و استحکامات. تصمیم تاکتیکی باید روی نقشه دیده شود و progression به‌جای یک عدد، بخشی از بازی باشد.</p><div class="story-links"><a class="story-primary icon-link" href="games/geometric-strategy.html"><svg class="icon"><use href="#i-games"/></svg><span>صفحه بازی</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div><div class="release-rail" aria-label="مسیرهای انتشار GeometricStrategy"><span><svg class="icon"><use href="#i-store"/></svg><b>خرید از سایت</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-download"/></svg><b>دانلود مستقیم</b><small>به‌زودی</small></span><span><svg class="icon"><use href="#i-myket"/></svg><b>مایکت</b><small>به‌زودی</small></span></div></div></div></section>
+    <section id="tools" class="tool-spotlight"><div class="container tool-spotlight-grid"><div class="tool-spotlight-media"><img src="BOSA-Logo.png" width="320" height="320" loading="lazy" alt="لوگوی BOSA Base"></div><div><span class="eyeline">UNITY EDITOR TOOL</span><h2>BOSA – Base</h2><p>PlayFreeverse علاوه بر توسعه بازی، ابزارهای کاربردی Unity را بر اساس نیازهای واقعی تولید در مسیر توسعه Freeverse می‌سازد. اطلاعات BOSA – Base حذف نمی‌شود و از این پس صفحه مستقل خودش را دارد.</p><a class="story-primary icon-link" href="tools/bosa-base.html"><span>صفحه BOSA – Base</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div></div></section>
+    <section id="studio" class="studio-manifesto"><div class="container manifesto-grid"><div><span class="eyeline">PLAYFREEVERSE</span><h2>سبک یعنی سریع؛<br>ساده یعنی دقیق، نه ابتدایی.</h2></div><div><p>این سایت بدون فریم‌ورک، فونت خارجی یا کتابخانه آیکون ساخته شده است. تصویرها WebP سبک‌اند و آیکون‌ها SVG داخلی‌اند؛ یعنی ظاهر گیمی بدون هزینه سنگین برای لود صفحه.</p><a class="manifesto-link icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی و تماس</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></div></div></section>
+    <section class="social-stage" aria-label="شبکه‌های رسمی PlayFreeverse"><div class="container social-stage-grid"><div><span class="eyeline">FOLLOW THE BUILD</span><h2>پشت صحنه ساخت بازی‌ها را دنبال کن.</h2></div><nav class="big-socials" aria-label="شبکه‌های اجتماعی"><a class="icon-link" href="https://www.youtube.com/@freeverseGame" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-youtube"/></svg><span>YouTube</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a><a class="icon-link" href="https://www.instagram.com/playfreeverse/" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-instagram"/></svg><span>Instagram</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a><a class="icon-link" href="https://github.com/playfreeverse6770" target="_blank" rel="noopener noreferrer"><img class="social-icon-img" src="assets/icons/github-icon.webp" width="28" height="28" alt="آیکون GitHub"><span>GitHub</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a></nav></div></section></main>
+  <footer class="site-footer studio-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="./"><img src="playfreeverse_logo.jpg" width="42" height="42" alt="لوگوی PlayFreeverse"><span>PlayFreeverse</span></a><p>Independent games. Distinct worlds.</p></div><div class="footer-links"><a class="icon-link" href="privacy.html"><svg class="icon"><use href="#i-shield"/></svg><span>حریم خصوصی</span></a><a class="icon-link" href="terms.html"><svg class="icon"><use href="#i-doc"/></svg><span>شرایط استفاده</span></a><a class="icon-link" href="support.html"><svg class="icon"><use href="#i-support"/></svg><span>پشتیبانی</span></a><a class="icon-link" href="mailto:playfreeverse@gmail.com"><svg class="icon"><use href="#i-mail"/></svg><span>playfreeverse@gmail.com</span></a></div></div><div class="container copyright">© 2026 PlayFreeverse. همه حقوق محفوظ است.</div></footer>
+</body></html>
