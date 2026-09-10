@@ -1,5 +1,19 @@
-# PlayFreeverse
+# PlayFreeverse Website
 
-Official website repository for PlayFreeverse, including Freeverse, FlyFootball, GeometricStrategy and the BOSA – Base Unity plugin.
+Official static website for Freeverse and PlayFreeverse projects.
 
-Website: https://playfreeverse6770.github.io/playfreeverse.github.io/
+## Current launch-site branch
+
+`feature/freeverse-mycket-launch-site`
+
+This branch contains:
+
+- Freeverse landing page in Persian
+- Privacy policy
+- Terms of use
+- Support page
+- Myket listing draft
+- Responsive layout
+- Screenshot and download placeholders
+
+Game screenshots, APK metadata, version number and final store assets will be added after they are provided.
