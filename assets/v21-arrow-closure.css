@@ -1,0 +1,69 @@
+/* V21: isolate the only previous/next arrow layer; no changes to text or artwork */
+.pf-home-hero .pf-home-hero-controls,
+.pf-home-hero .pf-home-hero-control-row {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  transform: none !important;
+  pointer-events: none !important;
+  direction: ltr !important;
+  z-index: 30 !important;
+}
+.pf-home-hero .pf-home-hero-arrow {
+  position: absolute !important;
+  top: 28% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  font-size: 0 !important;
+  color: #fff !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  pointer-events: auto !important;
+  overflow: hidden !important;
+  z-index: 31 !important;
+}
+.pf-home-hero .pf-home-hero-arrow::after {content: none !important; display: none !important;}
+.pf-home-hero .pf-home-hero-arrow::before {
+  display: block !important;
+  position: static !important;
+  font-size: 29px !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  transform: none !important;
+}
+.pf-home-hero .pf-home-hero-arrow[data-hero-prev] {
+  left: clamp(18px, 3.3vw, 48px) !important;
+  right: auto !important;
+}
+.pf-home-hero .pf-home-hero-arrow[data-hero-prev]::before {content: '\2039' !important;}
+.pf-home-hero .pf-home-hero-arrow[data-hero-next] {
+  right: clamp(18px, 3.3vw, 48px) !important;
+  left: auto !important;
+}
+.pf-home-hero .pf-home-hero-arrow[data-hero-next]::before {content: '\203A' !important;}
+@media(max-width: 700px){
+ .pf-home-hero .pf-home-hero-arrow{top: 24% !important;width:40px !important;min-width:40px !important;max-width:40px !important;height:40px !important;min-height:40px !important;max-height:40px !important;flex-basis:40px !important;}
+}
