@@ -1,0 +1,228 @@
+/* V17: strict hero zoning - arrows and text never share the same space */
+
+.pf-home-hero { position: relative !important; }
+
+/* Desktop */
+@media (min-width: 980px) {
+  .pf-home-hero .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    z-index: 6 !important;
+    pointer-events: none !important;
+  }
+
+  /* Text lives only in the dark right zone */
+  .pf-home-hero .pf-home-hero-copy {
+    position: absolute !important;
+    right: clamp(64px, 6.2vw, 108px) !important;
+    top: 50% !important;
+    transform: translateY(-38%) !important;
+    width: clamp(320px, 28vw, 430px) !important;
+    max-width: clamp(320px, 28vw, 430px) !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 18px 18px 16px !important;
+    direction: rtl !important;
+    text-align: right !important;
+    border-radius: 18px !important;
+    background: linear-gradient(180deg, rgba(4,12,28,.18) 0%, rgba(4,12,28,.28) 100%) !important;
+    backdrop-filter: blur(2px) !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-topline,
+  .pf-home-hero .pf-home-hero-kicker,
+  .pf-home-hero .pf-home-hero-title,
+  .pf-home-hero .pf-home-hero-subtitle {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: right !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    margin-inline: 0 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-topline,
+  .pf-home-hero .pf-home-hero-kicker {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+    margin: 0 0 10px !important;
+    letter-spacing: .08em !important;
+  }
+
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(28px, 3.5vw, 52px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.035em !important;
+    margin: 0 0 12px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-subtitle {
+    font-size: clamp(14px, 1.08vw, 18px) !important;
+    line-height: 1.85 !important;
+    margin: 0 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-dots {
+    margin-top: 16px !important;
+    justify-content: flex-end !important;
+  }
+
+  /* Arrows get their own band higher up, away from text */
+  .pf-home-hero .pf-home-hero-controls {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 8 !important;
+    pointer-events: none !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow {
+    position: absolute !important;
+    top: 26% !important;
+    transform: translateY(-50%) !important;
+    pointer-events: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev] {
+    left: clamp(28px, 2.8vw, 52px) !important;
+    right: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next] {
+    right: clamp(28px, 2.8vw, 52px) !important;
+    left: auto !important;
+  }
+}
+
+/* Large titles like GeometricStrategy still fit */
+@media (min-width: 980px) and (max-width: 1200px) {
+  .pf-home-hero .pf-home-hero-copy {
+    width: clamp(320px, 31vw, 390px) !important;
+    max-width: clamp(320px, 31vw, 390px) !important;
+    right: 56px !important;
+  }
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(26px, 3vw, 40px) !important;
+  }
+}
+
+/* Mobile / tablet */
+@media (max-width: 979px) {
+  .pf-home-hero .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    z-index: 6 !important;
+    pointer-events: none !important;
+  }
+
+  .pf-home-hero .pf-home-hero-copy {
+    position: absolute !important;
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 24px !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 16px 16px 14px !important;
+    direction: rtl !important;
+    text-align: right !important;
+    border-radius: 16px !important;
+    background: rgba(3, 13, 29, .82) !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(26px, 5.5vw, 40px) !important;
+    line-height: 1.1 !important;
+    overflow-wrap: anywhere !important;
+    margin: 0 0 10px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-subtitle {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-dots {
+    justify-content: flex-end !important;
+    margin-top: 14px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-controls { inset: 0 !important; z-index: 8 !important; pointer-events: none !important; }
+  .pf-home-hero .pf-home-hero-arrow { pointer-events: auto !important; top: 22% !important; transform: translateY(-50%) !important; }
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev] { left: 16px !important; }
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next] { right: 16px !important; }
+}
+
+/* Button blocks: tighter and more consistent everywhere */
+main .release,
+main .pf-platforms {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+main .release > span,
+main .pf-platform {
+  min-width: 0 !important;
+  min-height: 78px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 3px !important;
+  padding: 10px 8px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(130, 152, 188, .26) !important;
+  background: #eef3fa !important;
+  box-sizing: border-box !important;
+}
+
+main .release > span img,
+main .pf-platform img {
+  width: 25px !important;
+  height: 25px !important;
+  object-fit: contain !important;
+}
+
+main .release > span b,
+main .pf-platform-text strong {
+  color: #111c31 !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+}
+
+main .release > span small,
+main .pf-platform-text small {
+  color: #5d6a7d !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 620px) {
+  main .release,
+  main .pf-platforms { grid-template-columns: 1fr !important; }
+}
