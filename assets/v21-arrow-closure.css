@@ -105,3 +105,15 @@
     max-height: 40px !important;
   }
 }
+
+/* Game-specific title fitting: keep GeometricStrategy on one line on desktop. */
+@media (min-width: 980px) {
+  .pf-home-hero:has(.pf-home-hero-slide.is-active[data-title="GeometricStrategy"]) .pf-home-hero-title {
+    font-size: clamp(24px, 2.2vw, 31px) !important;
+    letter-spacing: -0.055em !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    text-wrap: nowrap !important;
+  }
+}
