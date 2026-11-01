@@ -1,0 +1,21 @@
+/* V11: high-resolution five-game hero artwork and responsive readable copy */
+.pf-home-hero-slide.is-lowres{background:#050e1c!important}
+.pf-home-hero-slide img,.pf-home-hero-slide.is-lowres img{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ max-width:none!important;margin:0!important;object-fit:cover!important;
+ object-position:50% 50%!important;filter:none!important;transform:none!important;
+ image-rendering:auto!important;
+}
+.pf-home-hero-copy{width:min(690px,calc(100vw - 125px));max-width:100%;min-width:0;direction:rtl;text-align:right}
+.pf-home-hero-title{font-size:clamp(34px,5.6vw,76px)!important;line-height:1.13!important;
+ white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important;
+ max-width:100%!important;margin:12px 0!important;letter-spacing:-.025em!important;
+ color:#fff!important;text-wrap:balance}
+.pf-home-hero-copy:has(~*){}
+.pf-home-hero-subtitle{max-width:660px!important;line-height:1.75!important;
+ overflow-wrap:break-word!important;font-size:clamp(14px,1.6vw,19px)!important}
+.pf-home-hero-shell{justify-content:flex-start!important;align-items:flex-end!important}
+.pf-home-hero-overlay{background:linear-gradient(0deg,rgba(2,9,24,.82) 0%,rgba(2,9,24,.4) 25%,transparent 65%),linear-gradient(270deg,rgba(2,9,24,.56),transparent 70%)!important}
+@media(min-width:1000px){.pf-home-hero-copy{margin-inline-start:auto;margin-inline-end:28px}}
+@media(max-width:800px){.pf-home-hero-copy{width:calc(100% - 40px)!important;margin-inline:20px!important}.pf-home-hero-title{font-size:clamp(31px,7vw,54px)!important}}
+@media(max-width:480px){.pf-home-hero-title{font-size:clamp(27px,8vw,43px)!important}.pf-home-hero-shell{padding-bottom:37px!important}}

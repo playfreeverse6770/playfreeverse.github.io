@@ -1,0 +1,127 @@
+/* V9: improve contrast and text visibility in lower homepage sections */
+
+/* General section contrast on dark / navy backgrounds */
+main .section,
+main section[class*="section"],
+main .game-story,
+main section[class*="story"] {
+  color:#e8f0ff;
+}
+
+main .section p,
+main .section li,
+main .section small,
+main .game-story p,
+main section[class*="story"] p,
+main [class*="game-copy"] p,
+main [class*="story-copy"] p {
+  color:rgba(232,240,255,.88) !important;
+}
+
+/* Headings and game names */
+main .section h2,
+main .section h3,
+main .game-story h2,
+main .game-story h3,
+main [class*="game-copy"] h2,
+main [class*="game-copy"] h3,
+main [class*="story-copy"] h2,
+main [class*="story-copy"] h3 {
+  color:#ffffff !important;
+  opacity:1 !important;
+  text-shadow:0 4px 16px rgba(0,0,0,.18);
+}
+
+/* Big faded decorative titles like Freeverse / Void Reign / etc */
+main [class*="story-title"],
+main [class*="game-title"],
+main [class*="display-title"],
+main [class*="big-title"],
+main .game-copy h3,
+main .story-copy h3 {
+  color:#f3f7ff !important;
+  opacity:1 !important;
+}
+
+/* Kickers / overlines */
+main .kicker,
+main [class*="kicker"],
+main .eyebrow,
+main [class*="eyebrow"],
+main [class*="story-type"],
+main [class*="release-badge"] {
+  color:#9dbdff !important;
+  opacity:1 !important;
+}
+
+/* Links */
+main a,
+main .text-link,
+main [class*="manifesto-link"],
+main [class*="story-primary"] {
+  color:#53a2ff;
+}
+main a:hover,
+main .text-link:hover,
+main [class*="manifesto-link"]:hover,
+main [class*="story-primary"]:hover {
+  color:#84beff;
+}
+
+/* Game specific CTA / store cards / release boxes */
+main .release,
+main [class*="release"],
+main [class*="store"],
+main [class*="platform"],
+main [class*="download"] {
+  color:#0a1220;
+}
+
+/* Preserve readable text inside white cards */
+main .release *,
+main [class*="release"] *,
+main [class*="store"] *,
+main [class*="platform"] *,
+main [class*="download"] * {
+  color:inherit;
+}
+
+/* If there are white cards in dark sections, give them better separation */
+main .release span,
+main [class*="store-card"],
+main [class*="download-card"],
+main [class*="platform-card"] {
+  background:rgba(255,255,255,.96);
+  border-color:rgba(11,19,32,.08);
+}
+
+/* Prevent dimmed text inherited from older styles */
+main [style*="opacity"],
+main [class*="muted"] {
+  opacity:1;
+}
+
+/* Stronger target for the faded game titles visible in screenshots */
+main [class*="game-copy"] h3,
+main [class*="story-copy"] h3,
+main .game-copy h3,
+main .story-copy h3 {
+  color:#ffffff !important;
+  font-weight:900 !important;
+  letter-spacing:-.02em;
+}
+
+/* Improve spacing and readability */
+main [class*="game-copy"],
+main [class*="story-copy"] {
+  color:#e8f0ff;
+}
+
+@media (max-width: 640px){
+  main .section p,
+  main .game-story p,
+  main [class*="game-copy"] p,
+  main [class*="story-copy"] p {
+    color:rgba(232,240,255,.92) !important;
+  }
+}

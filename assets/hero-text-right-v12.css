@@ -1,0 +1,99 @@
+/* V12: text belongs in the intentionally dark right-hand artwork area. */
+@media (min-width: 900px) {
+  .pf-home-hero { position: relative !important; }
+  .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 92px clamp(66px, 7vw, 132px) 56px 45px !important;
+    pointer-events: none;
+  }
+  .pf-home-hero-copy {
+    box-sizing: border-box !important;
+    direction: rtl !important;
+    text-align: right !important;
+    flex: 0 0 auto !important;
+    width: min(34vw, 490px) !important;
+    max-width: min(34vw, 490px) !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 0 0 15px !important;
+    overflow: visible !important;
+    pointer-events: auto;
+  }
+  .pf-home-hero-title {
+    font-size: clamp(29px, 3.6vw, 58px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.04em !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    text-align: right !important;
+    margin: 14px 0 !important;
+    color: #fff !important;
+  }
+  .pf-home-hero-topline, .pf-home-hero-kicker {
+    display: block !important;
+    text-align: right !important;
+    line-height: 1.65 !important;
+    color: #eaf4ff !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+  .pf-home-hero-subtitle {
+    text-align: right !important;
+    line-height: 1.85 !important;
+    font-size: clamp(15px, 1.25vw, 18px) !important;
+    margin-top: 16px !important;
+    color: #fff !important;
+    max-width: 100% !important;
+  }
+  .pf-home-hero-dots { justify-content: flex-start !important; }
+}
+@media (min-width: 900px) and (max-width: 1150px) {
+  .pf-home-hero-copy { width: 38vw !important; max-width: 38vw !important; }
+  .pf-home-hero-title { font-size: clamp(28px, 3.25vw, 42px) !important; }
+}
+@media (max-width: 899px) {
+  .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    padding: 95px 24px 58px !important;
+    pointer-events: none;
+  }
+  .pf-home-hero-copy {
+    margin: 0 !important;
+    width: min(100%, 530px) !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    border-radius: 14px;
+    background: rgba(3, 11, 26, .62);
+    backdrop-filter: blur(4px);
+    direction: rtl !important;
+    text-align: right !important;
+    pointer-events: auto;
+  }
+  .pf-home-hero-title {
+    font-size: clamp(28px, 6.1vw, 46px) !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+  .pf-home-hero-subtitle { font-size: 15px !important; line-height: 1.75 !important; }
+}

@@ -1,0 +1,136 @@
+/* Visual polish patch V6: hero text contrast + header overlay */
+body{
+  background:#07101b;
+}
+body > .site-header{
+  position:absolute !important;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:linear-gradient(180deg, rgba(5,10,18,.72) 0%, rgba(5,10,18,.36) 55%, rgba(5,10,18,0) 100%) !important;
+  border-bottom:0 !important;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:none !important;
+}
+body > .site-header .nav,
+body > .site-header .nav-wrap{
+  padding-top:20px;
+  padding-bottom:18px;
+}
+body > .site-header .brand,
+body > .site-header .brand span,
+body > .site-header .navlinks a,
+body > .site-header .site-nav a,
+body > .site-header .menu summary,
+body > .site-header .lang{
+  color:#ffffff !important;
+}
+body > .site-header .lang,
+body > .site-header .navlinks a,
+body > .site-header .site-nav a,
+body > .site-header .menu summary{
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+body > .site-header .lang{
+  background:rgba(255,255,255,.10) !important;
+  border:1px solid rgba(255,255,255,.24) !important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+body > .site-header .brand img{
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+body > .site-header .menu nav{
+  background:rgba(9,14,24,.94) !important;
+  border-color:rgba(255,255,255,.12) !important;
+}
+
+.pf-home-hero{
+  margin-top:0 !important;
+}
+.pf-home-hero-shell{
+  padding-top:120px !important;
+}
+.pf-home-hero-overlay{
+  background:
+    linear-gradient(180deg, rgba(4,5,8,.10) 0%, rgba(4,5,8,.22) 22%, rgba(4,5,8,.58) 66%, rgba(4,5,8,.88) 100%),
+    linear-gradient(90deg, rgba(4,5,8,.14) 0%, rgba(4,5,8,.18) 36%, rgba(4,5,8,.62) 100%) !important;
+}
+.pf-home-hero-title,
+.pf-home-hero-subtitle,
+.pf-home-hero-topline,
+.pf-home-hero-kicker{
+  color:#ffffff !important;
+  text-shadow:0 6px 24px rgba(0,0,0,.35);
+}
+.pf-home-hero-dots{margin-top:24px}
+
+.pf-home-hero-meta{
+  transform:translateY(28%) !important;
+}
+.pf-home-hero-panel{
+  background:linear-gradient(180deg, rgba(7,12,22,.96) 0%, rgba(4,8,15,.94) 100%) !important;
+  border:1px solid rgba(255,255,255,.10) !important;
+  box-shadow:0 26px 60px rgba(0,0,0,.38) !important;
+}
+.pf-home-hero-panel-copy,
+.pf-home-hero-panel-copy *{
+  color:#ffffff !important;
+}
+.pf-home-hero-panel-copy h2{
+  color:#ffffff !important;
+  font-weight:900;
+}
+.pf-home-hero-panel-copy p{
+  color:rgba(255,255,255,.86) !important;
+}
+.pf-home-hero-panel-actions{
+  gap:14px !important;
+}
+.pf-home-hero-btn{
+  color:#ffffff !important;
+  border-color:rgba(255,255,255,.20) !important;
+}
+.pf-home-hero-btn-primary{
+  background:#ffffff !important;
+  color:#07101b !important;
+  border-color:#ffffff !important;
+}
+.pf-home-hero-btn-secondary{
+  background:rgba(255,255,255,.08) !important;
+  color:#ffffff !important;
+}
+.pf-home-hero-btn-secondary:hover,
+.pf-home-hero-btn-secondary:focus-visible{
+  background:rgba(255,255,255,.16) !important;
+}
+
+/* prevent hidden/ultra-dark inherited text in the section right below hero */
+#games,
+#games .game-copy,
+#games .game-copy p,
+#games .game-copy h3,
+#games .text-link{
+  color:inherit;
+}
+
+@media (max-width: 980px){
+  body > .site-header .nav,
+  body > .site-header .nav-wrap{
+    padding-top:14px;
+    padding-bottom:12px;
+  }
+  .pf-home-hero-shell{padding-top:106px !important; padding-bottom:230px !important;}
+  .pf-home-hero-meta{transform:translateY(34%) !important;}
+}
+@media (max-width: 640px){
+  body > .site-header{
+    background:linear-gradient(180deg, rgba(5,10,18,.82) 0%, rgba(5,10,18,.42) 62%, rgba(5,10,18,0) 100%) !important;
+  }
+  .pf-home-hero-shell{padding-top:94px !important; padding-bottom:240px !important;}
+  .pf-home-hero-panel{padding:18px !important;}
+  .pf-home-hero-panel-actions{flex-direction:column; align-items:stretch;}
+  .pf-home-hero-btn{width:100%;}
+}

@@ -12,3 +12,19 @@
 .hero-main:has(img[src*="freeverse-home-v3"]),.visual:has(img[src*="freeverse-home-v3"]){background:url('assets/games/freeverse-billboard-v5.jpg?v=1') center/cover no-repeat}.hero-main img[src*="freeverse-home-v3"],.visual img[src*="freeverse-home-v3"]{opacity:0}
 @media(max-width:980px){.navlinks{display:none}.menu{display:block}.menu summary{list-style:none;border:1px solid var(--line);border-radius:12px;padding:7px 11px;cursor:pointer}.menu[open] nav{position:absolute;right:20px;top:68px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:var(--shadow);display:grid;min-width:210px}.menu nav a{padding:10px;border-radius:10px}.hero-grid,.game-row,.game-row.reverse,.tool-grid{grid-template-columns:1fr}.hero-collage{min-height:430px}.game-row.reverse .visual{order:0}.section-head{display:block}.section-head p{margin-top:14px}.footer-grid{grid-template-columns:1fr}.game-copy:has(a[href*="geometric-strategy"]) h3{font-size:clamp(34px,7vw,46px);white-space:normal}}
 @media(max-width:680px){.container{width:min(100% - 24px,1180px)}.hero{padding:44px 0 64px}.hero h1{font-size:49px}.hero-collage{min-height:330px}.hero-tile{width:46%;border-width:4px}.section{padding:68px 0}.release,.social-grid{grid-template-columns:1fr}.release>span{border-inline-end:0;border-bottom:1px solid var(--line)}.release>span:last-child{border-bottom:0}.tool-logo{min-height:220px}}
+/* PF SHOWCASE V1 */
+.hero-showcase{position:relative;max-width:100%;min-width:0;aspect-ratio:16/10;overflow:hidden;border-radius:22px;background:#131927;box-shadow:0 25px 65px #0d182b30;isolation:isolate}
+.showcase-viewport,.hero-showcase .slide,.hero-showcase .slide>a{position:absolute;inset:0;display:block}
+.hero-showcase .slide{opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease}
+.hero-showcase .slide.is-active{opacity:1;visibility:visible;z-index:1}
+.hero-showcase .slide img{width:100%;height:100%;object-fit:cover}
+.showcase-label{position:absolute;bottom:0;left:0;right:0;padding:55px 26px 32px;display:grid;gap:5px;direction:ltr;text-align:left;background:linear-gradient(transparent,#070b13d9);color:#fff}
+.showcase-label strong{font-size:clamp(23px,3vw,38px);line-height:1.15}.showcase-label small{font-size:13px;opacity:.9}
+.showcase-arrow{position:absolute;z-index:3;top:48%;transform:translateY(-50%);width:39px;height:44px;border:0;border-radius:12px;background:#101a2bbd;color:white;cursor:pointer;display:grid;place-items:center;font-size:23px}
+.showcase-arrow[data-prev]{left:10px}.showcase-arrow[data-next]{right:10px}
+.showcase-dots{position:absolute;z-index:3;bottom:10px;right:18px;display:flex;gap:7px;direction:ltr}
+.showcase-dots .slider-dot{height:9px;width:9px;padding:0;border-radius:999px;background:#ffffff88;border:0;cursor:pointer}
+.showcase-dots .slider-dot.is-active{width:26px;background:#fff}
+.showcase-arrow:focus-visible,.showcase-dots .slider-dot:focus-visible{outline:3px solid #3c97ff;outline-offset:3px}
+@media(max-width:760px){.hero-showcase{aspect-ratio:16/11;border-radius:16px}.showcase-label{padding:32px 17px 25px}.showcase-arrow{width:32px;height:38px}}
+@media(prefers-reduced-motion:reduce){.hero-showcase .slide{transition:none}}

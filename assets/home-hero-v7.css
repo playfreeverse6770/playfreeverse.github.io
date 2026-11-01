@@ -1,0 +1,94 @@
+/* V7: hero info panel layout fix */
+.pf-home-hero-panel{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:18px !important;
+  border:0 !important;
+  box-shadow:none !important;
+  border-radius:18px !important;
+  padding:26px 28px !important;
+  overflow:hidden !important;
+}
+
+.pf-home-hero-panel-copy{
+  width:100% !important;
+  text-align:right !important;
+  direction:rtl !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.pf-home-hero-panel-copy h2,
+.pf-home-hero-panel-copy p{
+  width:100% !important;
+  max-width:100% !important;
+  text-align:right !important;
+  overflow-wrap:anywhere !important;
+  word-break:normal !important;
+}
+
+.pf-home-hero-panel-copy h2{
+  margin:0 0 10px !important;
+  padding:0 !important;
+  font-size:clamp(28px,3vw,40px) !important;
+  line-height:1.15 !important;
+}
+
+.pf-home-hero-panel-copy p{
+  margin:0 !important;
+  padding:0 !important;
+  font-size:18px !important;
+  line-height:1.95 !important;
+}
+
+.pf-home-hero-panel-actions{
+  width:100% !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:12px !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.pf-home-hero-btn{
+  min-height:48px !important;
+  padding:0 18px !important;
+  font-size:15px !important;
+  white-space:nowrap !important;
+}
+
+@media (max-width: 980px){
+  .pf-home-hero-panel{
+    padding:22px 22px !important;
+    gap:16px !important;
+  }
+  .pf-home-hero-panel-copy p{
+    font-size:16px !important;
+    line-height:1.85 !important;
+  }
+}
+
+@media (max-width: 640px){
+  .pf-home-hero-panel{
+    padding:18px 16px !important;
+    border-radius:16px !important;
+  }
+  .pf-home-hero-panel-copy h2{
+    font-size:28px !important;
+  }
+  .pf-home-hero-panel-copy p{
+    font-size:15px !important;
+    line-height:1.8 !important;
+  }
+  .pf-home-hero-panel-actions{
+    flex-direction:column !important;
+    align-items:stretch !important;
+  }
+  .pf-home-hero-btn{
+    width:100% !important;
+    white-space:normal !important;
+  }
+}

@@ -1,0 +1,198 @@
+:root{
+  --pf-header-offset: 86px;
+}
+.pf-home-hero{
+  position:relative;
+  min-height:calc(100vh - var(--pf-header-offset));
+  background:#06070a;
+  color:#fff;
+  overflow:hidden;
+  isolation:isolate;
+}
+.pf-home-hero *{box-sizing:border-box}
+.pf-home-hero-media,
+.pf-home-hero-slide{
+  position:absolute;
+  inset:0;
+}
+.pf-home-hero-slide{
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .7s ease;
+}
+.pf-home-hero-slide.is-active{opacity:1}
+.pf-home-hero-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+}
+.pf-home-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(4,5,8,.08) 0%, rgba(4,5,8,.22) 30%, rgba(4,5,8,.68) 76%, rgba(4,5,8,.92) 100%),
+    linear-gradient(90deg, rgba(4,5,8,.16) 0%, rgba(4,5,8,.20) 36%, rgba(4,5,8,.62) 100%);
+  z-index:1;
+}
+.pf-home-hero-shell{
+  position:relative;
+  z-index:2;
+  min-height:calc(100vh - var(--pf-header-offset));
+  display:flex;
+  align-items:flex-end;
+  padding:48px 0 170px;
+}
+.pf-home-hero-copy{max-width:min(820px,100%)}
+.pf-home-hero-topline{
+  display:inline-block;
+  margin-bottom:14px;
+  font-size:13px;
+  letter-spacing:.18em;
+  font-weight:800;
+  color:rgba(255,255,255,.86);
+}
+.pf-home-hero-kicker{
+  margin:0 0 14px;
+  font-size:14px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.84);
+  font-weight:700;
+}
+.pf-home-hero-title{
+  margin:0;
+  max-width:min(11ch,100%);
+  font-size:clamp(54px,9.5vw,116px);
+  line-height:.88;
+  letter-spacing:-.055em;
+  font-weight:900;
+  text-wrap:balance;
+  text-shadow:0 10px 35px rgba(0,0,0,.30);
+}
+.pf-home-hero-subtitle{
+  margin:18px 0 0;
+  max-width:min(720px,100%);
+  font-size:clamp(18px,2.1vw,23px);
+  line-height:1.8;
+  color:rgba(255,255,255,.94);
+}
+.pf-home-hero-controls{
+  position:absolute;
+  inset-inline:0;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  pointer-events:none;
+}
+.pf-home-hero-control-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.pf-home-hero-arrow{
+  pointer-events:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.38);
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  backdrop-filter:blur(8px);
+  font-size:30px;
+  cursor:pointer;
+  transition:transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.pf-home-hero-arrow:hover,
+.pf-home-hero-arrow:focus-visible{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.7);
+}
+.pf-home-hero-meta{
+  position:absolute;
+  inset-inline:0;
+  bottom:0;
+  z-index:3;
+  transform:translateY(40%);
+}
+.pf-home-hero-panel{
+  background:rgba(8,11,18,.92);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 26px 60px rgba(5,8,15,.34);
+  backdrop-filter:blur(12px);
+  border-radius:26px;
+  padding:28px 30px;
+  display:grid;
+  grid-template-columns:1.15fr auto;
+  gap:24px;
+  align-items:center;
+}
+.pf-home-hero-panel-copy h2{
+  margin:0 0 10px;
+  font-size:clamp(28px,3.6vw,42px);
+  line-height:1.04;
+  letter-spacing:-.03em;
+}
+.pf-home-hero-panel-copy p{
+  margin:0;
+  font-size:17px;
+  line-height:1.9;
+  color:rgba(255,255,255,.88);
+}
+.pf-home-hero-panel-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:flex-end;
+}
+.pf-home-hero-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 20px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+  transition:transform .2s ease, background-color .2s ease, color .2s ease;
+}
+.pf-home-hero-btn:hover,
+.pf-home-hero-btn:focus-visible{transform:translateY(-2px)}
+.pf-home-hero-btn-primary{background:#fff;color:#0c1320;border-color:#fff}
+.pf-home-hero-btn-secondary{background:rgba(255,255,255,.08);color:#fff}
+.pf-home-hero-btn-secondary:hover,.pf-home-hero-btn-secondary:focus-visible{background:rgba(255,255,255,.16)}
+.pf-home-hero-dots{display:flex;gap:10px;align-items:center;margin-top:20px}
+.pf-home-hero-dot{
+  width:12px;height:12px;border:0;border-radius:999px;background:rgba(255,255,255,.38);padding:0;cursor:pointer;transition:width .2s ease, background-color .2s ease
+}
+.pf-home-hero-dot.is-active{width:34px;background:#fff}
+.anchor-target{position:relative;top:-92px;display:block;width:0;height:0;visibility:hidden}
+@media (max-width: 980px){
+  .pf-home-hero-shell{padding-bottom:210px}
+  .pf-home-hero-title{font-size:clamp(46px,12vw,78px);max-width:min(12ch,100%)}
+  .pf-home-hero-subtitle{font-size:17px}
+  .pf-home-hero-panel{grid-template-columns:1fr;gap:18px;padding:24px}
+  .pf-home-hero-panel-actions{justify-content:flex-start}
+}
+@media (max-width: 640px){
+  :root{--pf-header-offset:76px}
+  .pf-home-hero{min-height:calc(94vh - var(--pf-header-offset))}
+  .pf-home-hero-shell{min-height:calc(94vh - var(--pf-header-offset));padding:32px 0 220px}
+  .pf-home-hero-topline{font-size:12px;letter-spacing:.10em;line-height:1.6}
+  .pf-home-hero-kicker{font-size:12px;letter-spacing:.08em}
+  .pf-home-hero-title{font-size:clamp(38px,14vw,58px);max-width:100%}
+  .pf-home-hero-subtitle{font-size:15px;line-height:1.7}
+  .pf-home-hero-arrow{width:48px;height:48px;font-size:24px}
+  .pf-home-hero-panel{padding:20px;border-radius:22px}
+  .pf-home-hero-panel-copy h2{font-size:26px}
+  .pf-home-hero-panel-copy p{font-size:15px}
+  .pf-home-hero-btn{width:100%}
+}

@@ -1,0 +1,73 @@
+/* PlayFreeverse V15: deterministic positioning independent of RTL flex direction. */
+.pf-home-hero { position:relative !important; }
+@media (min-width: 980px) {
+  .pf-home-hero .pf-home-hero-shell {
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    max-width:none !important;
+    height:100% !important;
+    min-height:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    display:block !important;
+    transform:none !important;
+    pointer-events:none !important;
+    z-index:5 !important;
+  }
+  .pf-home-hero .pf-home-hero-copy {
+    position:absolute !important;
+    top:50% !important;
+    right:clamp(76px,7vw,132px) !important;
+    left:auto !important;
+    bottom:auto !important;
+    transform:translateY(-48%) !important;
+    box-sizing:border-box !important;
+    width:min(34vw,455px) !important;
+    min-width:0 !important;
+    max-width:min(34vw,455px) !important;
+    height:auto !important;
+    max-height:calc(100% - 160px) !important;
+    overflow:visible !important;
+    margin:0 !important;
+    padding:0 !important;
+    direction:rtl !important;
+    text-align:right !important;
+    pointer-events:auto !important;
+    background:transparent !important;
+  }
+}
+.pf-home-hero .pf-home-hero-copy > * { max-width:100% !important; box-sizing:border-box !important; }
+.pf-home-hero .pf-home-hero-topline,
+.pf-home-hero .pf-home-hero-kicker,
+.pf-home-hero .pf-home-hero-title,
+.pf-home-hero .pf-home-hero-subtitle {text-align:right !important; color:#fff !important; overflow-wrap:break-word !important;}
+.pf-home-hero .pf-home-hero-title {
+  display:block !important;
+  font-size:clamp(30px,3.35vw,52px) !important;
+  line-height:1.14 !important;
+  letter-spacing:-.035em !important;
+  margin:12px 0 16px !important;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+  word-break:normal !important;
+}
+.pf-home-hero .pf-home-hero-subtitle { font-size:clamp(15px,1.3vw,19px) !important; line-height:1.85 !important; margin:0 !important; }
+.pf-home-hero .pf-home-hero-topline,.pf-home-hero .pf-home-hero-kicker {font-size:12px !important;line-height:1.7 !important;}
+.pf-home-hero .pf-home-hero-dots {direction:ltr !important;justify-content:flex-end !important;margin-top:22px !important;}
+@media (min-width:980px) and (max-width:1190px) {
+  .pf-home-hero .pf-home-hero-copy { width:36vw !important;max-width:36vw !important;right:74px !important; }
+  .pf-home-hero .pf-home-hero-title {font-size:clamp(28px,3vw,39px) !important;}
+}
+@media (max-width:979px) {
+  .pf-home-hero .pf-home-hero-shell {position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;min-height:0 !important;max-width:none !important;margin:0 !important;padding:0 !important;display:block !important;pointer-events:none !important;z-index:5 !important;}
+  .pf-home-hero .pf-home-hero-copy {position:absolute !important;right:20px !important;left:20px !important;bottom:55px !important;top:auto !important;transform:none !important;width:auto !important;max-width:none !important;margin:0 !important;padding:16px !important;direction:rtl !important;text-align:right !important;pointer-events:auto !important;background:rgba(5,13,29,.72) !important;border-radius:16px !important;}
+  .pf-home-hero .pf-home-hero-title {font-size:clamp(25px,5vw,42px) !important;}
+}
+/* BOSA exactly one visible border; no outer panel frame, pseudo-frame or padding. */
+main .tool-grid .tool-logo,
+main .tool-grid .tool-logo::before,
+main .tool-grid .tool-logo::after {border:0 !important;outline:none !important;box-shadow:none !important;}
+main .tool-grid .tool-logo::before,main .tool-grid .tool-logo::after {content:none !important;display:none !important;}
+main .tool-grid .tool-logo {width:min(100%,320px) !important;max-width:320px !important;aspect-ratio:1/1 !important;height:auto !important;padding:0 !important;margin-inline:auto !important;background:transparent !important;border-radius:0 !important;overflow:visible !important;}
+main .tool-grid .tool-logo img {display:block !important;box-sizing:border-box !important;width:100% !important;height:100% !important;aspect-ratio:1/1 !important;object-fit:contain !important;object-position:center !important;padding:12px !important;border:1px solid #fff !important;border-radius:22px !important;outline:0 !important;box-shadow:none !important;background:#08152b !important;}
