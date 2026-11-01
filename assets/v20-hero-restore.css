@@ -1,0 +1,241 @@
+/* V20: restore hero to the approved look from the reference screenshot */
+
+/* Do not brighten or wash out the artwork */
+.pf-home-hero,
+.pf-home-hero-media,
+.pf-home-hero-slide,
+.pf-home-hero-slide::before,
+.pf-home-hero-slide::after,
+.pf-home-hero-overlay {
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+.pf-home-hero { position: relative !important; }
+
+/* Neutralize earlier visible copy panels */
+.pf-home-hero-copy {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Use explicit geometry so the result matches the approved reference */
+@media (min-width: 980px) {
+  .pf-home-hero .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    z-index: 6 !important;
+  }
+
+  /* invisible text zone on the dark right side */
+  .pf-home-hero .pf-home-hero-copy {
+    position: absolute !important;
+    right: clamp(56px, 5.4vw, 78px) !important;
+    top: 52% !important;
+    transform: translateY(-37%) !important;
+    width: clamp(320px, 27vw, 400px) !important;
+    max-width: clamp(320px, 27vw, 400px) !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    direction: rtl !important;
+    text-align: right !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-topline,
+  .pf-home-hero .pf-home-hero-kicker,
+  .pf-home-hero .pf-home-hero-title,
+  .pf-home-hero .pf-home-hero-subtitle,
+  .pf-home-hero .pf-home-hero-dots {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: right !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    margin-inline: 0 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-topline,
+  .pf-home-hero .pf-home-hero-kicker {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 10px !important;
+    letter-spacing: .07em !important;
+  }
+
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(34px, 3.8vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.04em !important;
+    margin: 0 0 14px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-subtitle {
+    font-size: clamp(14px, 1.05vw, 17px) !important;
+    line-height: 1.85 !important;
+    margin: 0 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-dots {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    margin-top: 16px !important;
+  }
+
+  /* arrows: previous on the left, next on the right, away from the text zone */
+  .pf-home-hero .pf-home-hero-controls {
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 8 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow {
+    position: absolute !important;
+    top: clamp(170px, 27.5%, 205px) !important;
+    transform: translateY(-50%) !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 999px !important;
+    pointer-events: auto !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow::before {
+    display: block !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    font-weight: 400 !important;
+    color: inherit !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev] {
+    left: clamp(38px, 4vw, 62px) !important;
+    right: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev]::before {
+    content: "\2039" !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next] {
+    right: clamp(38px, 4vw, 62px) !important;
+    left: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next]::before {
+    content: "\203A" !important;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+  .pf-home-hero .pf-home-hero-copy {
+    width: clamp(315px, 28vw, 360px) !important;
+    max-width: clamp(315px, 28vw, 360px) !important;
+    right: 48px !important;
+  }
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(31px, 3.2vw, 44px) !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .pf-home-hero .pf-home-hero-shell {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    z-index: 6 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-copy {
+    position: absolute !important;
+    right: 18px !important;
+    left: 18px !important;
+    bottom: 24px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    direction: rtl !important;
+    text-align: right !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+  }
+
+  .pf-home-hero .pf-home-hero-title {
+    font-size: clamp(28px, 5.5vw, 42px) !important;
+    line-height: 1.1 !important;
+    margin: 0 0 10px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-subtitle {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-dots {
+    justify-content: flex-end !important;
+    margin-top: 14px !important;
+  }
+
+  .pf-home-hero .pf-home-hero-controls {
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 8 !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow {
+    position: absolute !important;
+    top: 24% !important;
+    transform: translateY(-50%) !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 999px !important;
+    pointer-events: auto !important;
+    font-size: 0 !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow::before {
+    display: block !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev] { left: 18px !important; }
+  .pf-home-hero .pf-home-hero-arrow[data-hero-prev]::before { content: "\2039" !important; }
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next] { right: 18px !important; }
+  .pf-home-hero .pf-home-hero-arrow[data-hero-next]::before { content: "\203A" !important; }
+}
