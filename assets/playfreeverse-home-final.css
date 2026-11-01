@@ -1,0 +1,56 @@
+/* PlayFreeverse home unified visual authority. Replaces V3-V9 experimental overrides. */
+:root{--pf-navy:#07111f;--pf-text:#f5f8ff;--pf-muted:#c4d2e8}
+body{background:var(--pf-navy);color:var(--pf-text)}
+body>.site-header{position:absolute;inset:0 0 auto;z-index:60;background:linear-gradient(180deg,rgba(2,10,24,.83),rgba(2,10,24,.38) 75%,transparent);border:0;backdrop-filter:blur(7px)}
+body>.site-header a,body>.site-header .brand span,body>.site-header .navlinks,body>.site-header .menu summary{color:white}
+body>.site-header .lang{background:rgba(9,23,42,.38);color:white;border:1px solid #cbd8eb66}
+body>.site-header .navlinks a:hover{background:#ffffff24;color:#fff}
+.pf-home-hero{height:clamp(470px,65vw,760px);min-height:min(84svh,760px);position:relative;overflow:hidden;background:#050a12;isolation:isolate;color:white}
+.pf-home-hero-media,.pf-home-hero-slide{position:absolute;inset:0}
+.pf-home-hero-slide{opacity:0;pointer-events:none;visibility:hidden;transition:opacity .6s ease,visibility .6s}
+.pf-home-hero-slide.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.pf-home-hero-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 48%;filter:none!important;transform:none!important;image-rendering:auto}
+/* Small source assets are shown at native pixels, avoiding 320px thumbnails enlarged to 1400px. */
+.pf-home-hero-slide.is-lowres{background:radial-gradient(ellipse at center,#173a59,#081321 74%)}
+.pf-home-hero-slide.is-lowres img{object-fit:contain;width:min(100%,900px);height:min(75%,600px);position:absolute;inset:10% 0 auto;margin:auto;filter:none!important}
+.pf-home-hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(1,8,19,.81),rgba(1,8,19,0) 55%),linear-gradient(90deg,rgba(1,8,19,.24),transparent 70%)}
+.pf-home-hero-shell{position:relative;z-index:2;min-height:100%;display:flex;align-items:end;padding:110px 0 44px;pointer-events:none}
+.pf-home-hero-copy{max-width:720px;pointer-events:auto}
+.pf-home-hero-topline,.pf-home-hero-kicker{font-size:12px;letter-spacing:.1em;color:#d9e8fc;font-weight:700}
+.pf-home-hero-title{color:white;font-size:clamp(36px,7vw,82px);line-height:1.08;margin:8px 0;overflow-wrap:anywhere;text-shadow:0 2px 16px #05070eaa}
+.pf-home-hero-subtitle{font-size:clamp(15px,1.7vw,20px);line-height:1.8;color:#f4f7ff;max-width:680px;text-shadow:0 1px 12px #000}
+.pf-home-hero-controls{position:absolute;inset:50% 0 auto;transform:translateY(-50%);z-index:5;pointer-events:none}
+.pf-home-hero-control-row{display:flex;justify-content:space-between}
+.pf-home-hero-arrow{pointer-events:auto;border:1px solid #ffffff88;border-radius:50%;background:#08132688;color:#fff;font-size:27px;width:48px;height:48px;cursor:pointer}
+.pf-home-hero-arrow:hover,.pf-home-hero-arrow:focus-visible{background:#122f54}
+.pf-home-hero-dots{display:flex;gap:9px;margin-top:15px}
+.pf-home-hero-dot{width:12px;height:12px;border:0;border-radius:20px;background:#ffffff77;cursor:pointer;padding:0}
+.pf-home-hero-dot.is-active{width:29px;background:white}
+.pf-home-hero-meta{position:relative;transform:none!important;z-index:1;background:#07111f;padding:24px 0 35px;color:#fff}
+.pf-home-hero-panel{display:block;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important;color:#fff}
+.pf-home-hero-panel-copy{direction:rtl;text-align:right;max-width:100%;margin-bottom:20px}
+.pf-home-hero-panel-copy h2{font-size:clamp(26px,3vw,40px);color:#fff!important;opacity:1!important;margin:0 0 8px;line-height:1.25;overflow-wrap:anywhere}
+.pf-home-hero-panel-copy p{font-size:clamp(15px,1.5vw,18px);color:#dbe5f5!important;opacity:1!important;line-height:1.9;margin:0}
+.pf-home-hero-panel-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start;align-items:stretch}
+.pf-platform{display:flex;gap:12px;align-items:center;min-width:160px;padding:11px 14px;background:#f8fbff;color:#0f1c2c;border-radius:14px;direction:rtl}
+.pf-platform img{width:28px;height:28px;object-fit:contain;flex:none}
+.pf-platform-text{display:flex;flex-direction:column;gap:1px}
+.pf-platform strong{font-size:14px;color:#0e203b}
+.pf-platform small{font-size:11px;color:#51647c}
+.pf-panel-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-inline-start:auto}
+.pf-panel-links a{background:#172b43;border:1px solid #50657f;color:#fff;padding:12px 16px;border-radius:12px;font-weight:700}
+.pf-panel-links a:hover{background:#284869;color:#fff}
+/* Override the original light palette in every home section, including the prominent heading. */
+main>.section,main>.section.soft{background:#07111f;color:#f5f8ff;border-color:#20334d}
+main>.section h2,main>.section h3,main>.section .section-head h2,main>.section .game-copy h3{color:#fff!important;opacity:1!important}
+main>.section p,main>.section .game-copy p,main>.section .section-head p,main>.section .tool-copy p{color:#d0dcee!important;opacity:1!important}
+main>.section .kicker,main>.section .eyebrow{color:#9fc2f8!important}
+main>.section .text-link{color:#77b9ff!important}
+main>.section .release span{background:#f8fbff;color:#142239;border-color:#d8e3f2}
+main>.section .release span b,main>.section .release span small{color:#142239!important}
+main>.section .release span small{color:#5b6d82!important}
+main>.section .release img{object-fit:contain}
+main>.section .game-copy:has(a[href*="geometric-strategy"]) h3{font-size:clamp(27px,3.5vw,48px);overflow-wrap:anywhere;white-space:normal}
+main>.section .visual img{object-fit:contain;background:#142037}
+@media(max-width:750px){.pf-home-hero{height:570px;min-height:570px}.pf-home-hero-shell{padding:120px 0 40px}.pf-home-hero-title{font-size:clamp(34px,8vw,54px)}.pf-home-hero-subtitle{font-size:15px}.pf-home-hero-arrow{width:41px;height:41px}.pf-platform{flex:1 1 140px}.pf-panel-links{width:100%;margin:0}.pf-panel-links a{flex:1;text-align:center}.pf-home-hero-slide.is-lowres img{width:100%;height:70%}}
+@media(prefers-reduced-motion:reduce){.pf-home-hero-slide{transition:none}}
