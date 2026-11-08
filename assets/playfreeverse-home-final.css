@@ -54,3 +54,6 @@ main>.section .game-copy:has(a[href*="geometric-strategy"]) h3{font-size:clamp(2
 main>.section .visual img{object-fit:contain;background:#142037}
 @media(max-width:750px){.pf-home-hero{height:570px;min-height:570px}.pf-home-hero-shell{padding:120px 0 40px}.pf-home-hero-title{font-size:clamp(34px,8vw,54px)}.pf-home-hero-subtitle{font-size:15px}.pf-home-hero-arrow{width:41px;height:41px}.pf-platform{flex:1 1 140px}.pf-panel-links{width:100%;margin:0}.pf-panel-links a{flex:1;text-align:center}.pf-home-hero-slide.is-lowres img{width:100%;height:70%}}
 @media(prefers-reduced-motion:reduce){.pf-home-hero-slide{transition:none}}
+
+/* Published Myket hero link gets keyboard focus and hover states. */
+.pf-platform[href]{text-decoration:none;cursor:pointer}.pf-platform[href]:hover{background:#e6f4ff}.pf-platform[href]:focus-visible{outline:3px solid #2378d1;outline-offset:2px}
