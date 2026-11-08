@@ -14,7 +14,16 @@
  dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);dot.setAttribute('aria-current',i===active?'true':'false')});
  title.textContent=d.title||'';subtitle.textContent=d.subtitle||'';kicker.textContent=d.kicker||'';panelTitle.textContent=d.title||'';panelDesc.textContent=d.panel||'';
  page.href=d.page||'#games';section.href=d.section||'#games';
- const unavailable=d.title==='Void Reign';meta.querySelectorAll('[data-platform]').forEach(p=>{p.querySelector('small').textContent=unavailable?'هنوز منتشر نشده':'به‌زودی'});
+ const unavailable=d.title==='Void Reign',officialChainTrace=d.title==='ChainTrace';
+ meta.querySelectorAll('[data-platform]').forEach(p=>{
+  const isMyket=p.dataset.platform==='myket';
+  const canInstall=isMyket&&officialChainTrace;
+  p.querySelector('small').textContent=canInstall?'دریافت بازی':unavailable?'هنوز منتشر نشده':'به‌زودی';
+  if(isMyket){
+   if(canInstall){p.setAttribute('href','https://myket.ir/app/com.playfreeverse.chaintrace');p.setAttribute('target','_blank');p.setAttribute('rel','noopener noreferrer');p.setAttribute('aria-label','دریافت رسمی ChainTrace از مایکت')}
+   else{p.removeAttribute('href');p.removeAttribute('target');p.removeAttribute('rel');p.setAttribute('aria-label',unavailable?'مایکت — هنوز منتشر نشده':'مایکت — به‌زودی')}
+  }
+ });
  }
  function stop(){if(timer)clearInterval(timer);timer=null}
  function start(){stop();if(!prefersReducedMotion&&!document.hidden)timer=setInterval(()=>show(active+1),6500)}
