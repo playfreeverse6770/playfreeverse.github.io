@@ -21,3 +21,21 @@
 **Risks / rollback:** The live public link originates from the publisher; this tool cannot verify content behind Myket's access restrictions. Git commit history records each scoped change. Revert only specific file changes if needed; do not reset unrelated site history.
 
 **No Unity game source or Myket APK modified in this website update.**
+
+## 2026-11-10 — FlyFootball Myket store link and pending public APK
+
+**Status**: official publisher-supplied Myket link implemented in the public website source; external deployment/browser verification pending. Direct APK not uploaded or enabled.
+
+**Store URL**: https://myket.ir/app/com.playfreeverse.flyfootball; Android package: `com.playfreeverse.flyfootball`.
+
+**Changed files and architectural rationale**:
+- `games/flyfootball.html` and `en/games/flyfootball.html`: convert exactly the FlyFootball Myket button from a disabled span to an accessible external official-store anchor, while leaving website checkout and direct-download disabled. Correct explanatory copy without claiming a public APK.
+- `index.html` and `en/index.html`: convert exactly the FlyFootball summary card Myket element to an external link without changing existing three-column layout or other games; cache-bust Persian hero JS v12.
+- `assets/playfreeverse-home-final.js`: reuse the original hero slide and platform authority. Change dynamic Myket action only for FlyFootball and ChainTrace, remove href for all other slides. No parallel hero controller.
+- `Docs/OFFICIAL_PRODUCT_LINKS.md`: official URL record and future direct APK hosting/verification plan.
+- `Docs/PROJECT_DEVELOPMENT_LEDGER.md`: durable change and rollback record.
+
+**APK dependency**: publisher local filename `FlyFootball_V1.0.0.apk` known but binary is only on user's Windows PC, unavailable to this tool. A local filesystem path cannot be used as a web download link. The intended public host is a GitHub Release asset on the PUBLIC website repository, not the PRIVATE FlyFootball code repo. Upload and verify actual bytes before changing website links. No file checksum, content length, package inspection or download test yet.
+
+**Verification and rollback**: scoped exact-string checks, single parent commit and expected-ref update. Public deployment, mobile clickthrough and external store accessibility unverified; preserve all other websites/game code. Revert this scoped commit for rollback; no Unity/Game repository state changed.
+
