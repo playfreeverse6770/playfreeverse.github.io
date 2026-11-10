@@ -39,3 +39,11 @@
 
 **Verification and rollback**: scoped exact-string checks, single parent commit and expected-ref update. Public deployment, mobile clickthrough and external store accessibility unverified; preserve all other websites/game code. Revert this scoped commit for rollback; no Unity/Game repository state changed.
 
+
+## 2026-11-10 - ChainTrace site APK GitHub Release and bilingual UI templates
+- Applied paths: games/chaintrace.html, en/games/chaintrace.html, assets/games/chaintrace/bilingual-templates/*.webp.
+- Release asset: https://github.com/playfreeverse6770/playfreeverse.github.io/releases/download/chaintrace-v1.0.2-direct/ChainTrace_v1.0.2.apk
+- Asset SHA256 (local): 600353270EAC62C8B641D5F92C50FC83835026D515D6644DBE452958598566F5.
+- Architecture: website provides link to GitHub Release binary; does not put APK into Git history. Existing game runtime and locally dirty website checkout are not modified.
+- Verification: local APK hash, release asset presence, six image hashes, scoped git status. Browser download and Unity UI wiring remain manual pending tests.
+- Rollback: revert this scoped site commit; release asset remains independently published and can be managed in GitHub Releases.
