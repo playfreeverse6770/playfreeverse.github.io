@@ -47,3 +47,21 @@
 - Architecture: website provides link to GitHub Release binary; does not put APK into Git history. Existing game runtime and locally dirty website checkout are not modified.
 - Verification: local APK hash, release asset presence, six image hashes, scoped git status. Browser download and Unity UI wiring remain manual pending tests.
 - Rollback: revert this scoped site commit; release asset remains independently published and can be managed in GitHub Releases.
+
+## 2026-11-10 — Enable official FlyFootball v1.0.0 direct APK download
+
+**Status: Applied to public website Git main; public GitHub Release asset confirmed as non-draft uploaded. Pages deployment and end-user download remain to be checked in a browser.**
+
+**Release provenance**: https://github.com/playfreeverse6770/playfreeverse.github.io/releases/tag/flyfootball-v1.0.0 (tag `flyfootball-v1.0.0`; `draft=false`, `prerelease=false`); file `FlyFootball_V1.0.0.apk` (`166493951` bytes), GitHub asset SHA256 `C5B673FA82E6A9DAB66531EAEEC37D35B6AA714624BCCA814FFB58B47E8B5EF7`; canonical direct URL https://github.com/playfreeverse6770/playfreeverse.github.io/releases/download/flyfootball-v1.0.0/FlyFootball_V1.0.0.apk.
+
+**Files and owner decisions**:
+- `games/flyfootball.html`, `en/games/flyfootball.html`: convert *only FlyFootball direct APK* from disabled spans into actual anchors with official verified GitHub Release asset URL; preserve Myket and disabled site checkout. Explain existing v1.0.0 build predates C45.
+- `index.html`, `en/index.html`: activate only FlyFootball's direct-download card, retaining exact existing icons and summary layout; Persian hero download element changes from inactive span to anchor (no default href) so existing carousel JS can switch its URL safely; bump script cache v13.
+- `assets/playfreeverse-home-final.js`: existing single hero authority now sets/removes the download href based on selected FlyFootball slide. All other slides keep direct download disabled; ChainTrace and FlyFootball Myket behavior preserved; do not create another carousel script or data authority.
+- `Docs/OFFICIAL_PRODUCT_LINKS.md`: official release asset, hash and current version documented, replaced pending APK state.
+- `Docs/PROJECT_DEVELOPMENT_LEDGER.md`: this change trace includes reasons, download provenance, verification and rollback.
+
+**Integrity and safety**: release verified by GitHub release API before source modification; SHA256 is release asset metadata, not a local rehash of remote byte stream. Static exact-target and non-FlyFootball regression assertions run before atomic website Git commit. No personal Windows Unity files, billing files, asset imports, Git cleanup or project working tree changes. No APK bytes put in Git main history.
+
+**Known limits / rollback**: published APK is 2026-10-31 v1.0.0 and does NOT contain C45 gameplay changes. User's Unity C45 V4 static source merge reportedly PASS 32/32, but Unity compile/manual Play Mode and Android build remain unverified. Browser download, hash and Android installation should be verified by publisher. If needed, revert only this website commit; leave existing GitHub Release intact.
+

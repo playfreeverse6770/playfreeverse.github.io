@@ -16,13 +16,17 @@
  page.href=d.page||'#games';section.href=d.section||'#games';
  const unavailable=d.title==='Void Reign';
  const myketUrl=d.title==='ChainTrace'?'https://myket.ir/app/com.playfreeverse.chaintrace':d.title==='FlyFootball'?'https://myket.ir/app/com.playfreeverse.flyfootball':'';
+ const directApkUrl=d.title==='FlyFootball'?'https://github.com/playfreeverse6770/playfreeverse.github.io/releases/download/flyfootball-v1.0.0/FlyFootball_V1.0.0.apk':'';
  meta.querySelectorAll('[data-platform]').forEach(p=>{
   const isMyket=p.dataset.platform==='myket';
+  const isDownload=p.dataset.platform==='download';
   const canInstall=isMyket&&Boolean(myketUrl);
-  p.querySelector('small').textContent=canInstall?'دریافت بازی':unavailable?'هنوز منتشر نشده':'به‌زودی';
-  if(isMyket){
-   if(canInstall){p.setAttribute('href',myketUrl);p.setAttribute('target','_blank');p.setAttribute('rel','noopener noreferrer');p.setAttribute('aria-label','دریافت رسمی '+d.title+' از مایکت')}
-   else{p.removeAttribute('href');p.removeAttribute('target');p.removeAttribute('rel');p.setAttribute('aria-label',unavailable?'مایکت — هنوز منتشر نشده':'مایکت — به‌زودی')}
+  const canDownload=isDownload&&Boolean(directApkUrl);
+  p.querySelector('small').textContent=canInstall?'دریافت بازی':canDownload?'APK نسخه ۱.۰.۰':unavailable?'هنوز منتشر نشده':'به‌زودی';
+  if(isMyket||isDownload){
+   const url=isMyket?myketUrl:directApkUrl;
+   if(url){p.setAttribute('href',url);p.setAttribute('target','_blank');p.setAttribute('rel','noopener noreferrer');p.setAttribute('aria-label',isMyket?'دریافت رسمی '+d.title+' از مایکت':'دانلود مستقیم APK '+d.title)}
+   else{p.removeAttribute('href');p.removeAttribute('target');p.removeAttribute('rel');p.setAttribute('aria-label',unavailable?'هنوز منتشر نشده':isMyket?'مایکت — به‌زودی':'دانلود مستقیم — به‌زودی')}
   }
  });
  }

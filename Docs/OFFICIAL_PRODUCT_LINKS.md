@@ -21,9 +21,11 @@ This version-controlled register is the canonical source for links used by "Othe
 - Studio product page (FA): https://playfreeverse6770.github.io/playfreeverse.github.io/games/flyfootball.html
 - Studio product page (EN): https://playfreeverse6770.github.io/playfreeverse.github.io/en/games/flyfootball.html
 - Source: exact link supplied by the publisher on 2026-11-10.
-- **Direct APK pending**: publisher has `FlyFootball_V1.0.0.apk` locally, but this conversation cannot read files stored on their Windows computer. No public APK link exists or has been verified; keep direct-download buttons disabled.
-- Candidate public release host: the **public website repo** using release tag `flyfootball-v1.0.0`, not the private FlyFootball game repo. Never enable an unverified speculative URL.
-- Never commit the APK itself into site Git main. Verify SHA256, download response and package name after uploading the exact APK.
+- **Public direct APK release**: https://github.com/playfreeverse6770/playfreeverse.github.io/releases/tag/flyfootball-v1.0.0
+- **Verified direct APK asset URL**: https://github.com/playfreeverse6770/playfreeverse.github.io/releases/download/flyfootball-v1.0.0/FlyFootball_V1.0.0.apk
+- Published release tag: `flyfootball-v1.0.0`; asset state `uploaded`, size `166493951` bytes, SHA256 `C5B673FA82E6A9DAB66531EAEEC37D35B6AA714624BCCA814FFB58B47E8B5EF7` (metadata reported by GitHub).
+- APK was supplied as an existing dated build from 2026-10-31, before the C45 tongue/jump/fly-balance changes. Do not advertise as a C45 build.
+- APK is a GitHub Release asset in the **public website repository**, not a file committed to Git and not in the private FlyFootball source repository. When releasing a newer build, validate its exact hash/package and update the URL safely.
 
 ## Other games
 
